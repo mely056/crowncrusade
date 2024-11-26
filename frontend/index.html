@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="http://localhost:3001/socket.io/socket.io.js"></script> <!-- Update this line -->
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Medieval Torn</h1>
+    </header>
+    
+    <main class="container">
+        <!-- Character Creation -->
+        <div id="character-creation">
+            <button onclick="createPlayer()">Create Player</button>
+        </div>
+
+        <!-- Display Player Info -->
+        <div id="player-info"></div>
+
+        <!-- Training Section -->
+        <div id="training">
+            <h2>Training</h2>
+            <form id="training-form" action="">
+                <select id="training-method">
+                    <option value="Combat Arena">Combat Arena</option>
+                    <option value="Mystic Forest">Mystic Forest</option>
+                    <option value="Mountain Climb">Mountain Climb</option>
+                    <option value="Ancient Library">Ancient Library</option>
+                </select>
+                <button>Train</button>
+            </form>
+        </div>
+
+        <!-- Chat Section -->
+        <div id="chat">
+            <h2>Chat</h2>
+            <ul id="messages"></ul>
+            <form id="chat-form" action="">
+                <input id="message" autocomplete="off" placeholder="Type your message here"/><button>Send</button>
+            </form>
+        </div>
+
+        <!-- Guild Creation -->
+        <div id="guilds">
+            <h2>Create Guild</h2>
+            <form id="guild-form" action="">
+                <input id="guild-name" placeholder="Guild Name" required/><button>Create Guild</button>
+            </form>
+            <ul id="guild-list"></ul>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Medieval Torn. All rights reserved.</p>
+    </footer>
+</body>
+</html>
